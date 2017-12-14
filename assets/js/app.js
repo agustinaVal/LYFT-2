@@ -12,15 +12,32 @@ $(document).ready(function() {
 	  $('.second').show();
 	  $('.fondoAuto').hide();
 	});
+   
 
-	$('.input .botonInput').find('a').click(function(e) {
+   /*boosnip ayuda*/
+	$('.search-panel .dropdown-menu').find('a').click(function(e) {
 	e.preventDefault();
-	var remove = $(this).attr("href").replace("#", "");
-	var texto = $(this).text();
-	$('.input span#country').text(texto);
-	$('.Form #buscar').val(remove);
+	var param = $(this).attr("href").replace("#", "");
+	var concept = $(this).text();
+	$('.search-panel span#search_concept').text(concept);
+	$('.input-group #search_param').val(param);
+    });
 
+ 
+    /*desabilitar boton */
+   
+    $('#numeroIngresado').keyup(function() {
+    var telefono = $('#numeroIngresado').val();
+    if (telefono.length === 10) {
+    $('#next').removeClass("disabled");
+    $('#next').addClass("waves-effect waves-light btn");
+    }
+    if (telefono.length > 10) {
+    $('#next').addClass("disabled");
+}
 });
+
+
 
 
 /* final del jquery*/ 

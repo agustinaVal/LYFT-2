@@ -58,11 +58,15 @@ body{
 	color: #fff;
 	border-color: #fff;
 }
+
+.second{
+	margin: 5%;
+}
 .tittle{
 	border-bottom: 1px solid white;
 
 }
-#Next{
+#next{
 	width: 70%;
 	height: 3em;	
     color:#303030FF;
